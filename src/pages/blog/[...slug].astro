@@ -1,0 +1,27 @@
+---
+import MarkdownPostLayout from "../../layouts/MarkdownPostLayout.astro";
+import { getCollection } from "astro:content";
+
+import { slugToPath } from "../../libs/blog";
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("blog");
+  return blogEntries.map((entry) => {
+    const slug = slugToPath(entry.slug);
+    return {
+      params: { slug },
+      props: { slug, entry },
+    };
+  });
+}
+
+const { slug, entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<MarkdownPostLayout>
+  <a class="no-underline" href={`/blog/${slug}`}>
+    <h1 class="mb-16 text-center">{entry.data.title}</h1>
+  </a>
+  <Content />
+</MarkdownPostLayout>

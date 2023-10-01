@@ -1,0 +1,179 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+import "@fontsource/dela-gothic-one";
+import "@fontsource/m-plus-rounded-1c";
+import "@fontsource/noto-serif-jp";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+    />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  body {
+    font-family: "M Plus Rounded 1c", serif;
+    @apply leading-loose;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Dela Gothic One", cursive;
+    @apply mt-8 mb-4;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+  h5 {
+    @apply text-lg;
+  }
+  h6 {
+    @apply text-base;
+  }
+
+  p {
+    @apply mx-2;
+    @apply indent-3;
+  }
+
+  a {
+    @apply underline underline-offset-2;
+    @apply decoration-dotted hover:decoration-solid;
+  }
+
+  img {
+    @apply mx-auto;
+    @apply object-cover max-w-2xl w-full h-full;
+    @apply my-8 p-4;
+    @apply border border-black;
+  }
+
+  blockquote {
+    font-family: "Noto Serif Japanese", serif;
+    @apply m-6 px-4 py-4;
+    @apply border-y border-black;
+    @apply text-sm font-bold;
+  }
+  blockquote cite {
+    @apply block;
+    @apply italic;
+    @apply w-max ml-auto;
+  }
+  blockquote p {
+    @apply mt-2;
+  }
+
+  ul,
+  ol {
+    @apply my-4;
+  }
+
+  ul li ul,
+  ol li ol {
+    @apply my-1;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+  ul li:before {
+    content: "⏵";
+    @apply pr-2;
+  }
+
+  ul.contains-task-list li:before {
+    content: "";
+  }
+
+  ol {
+    @apply list-none;
+    counter-reset: section;
+  }
+  ol > li:before {
+    content: counters(section, ".") ". ";
+    counter-increment: section;
+  }
+
+  ul li,
+  ol li {
+    @apply pl-4;
+  }
+
+  hr {
+    @apply border-black;
+    @apply my-8;
+  }
+
+  p > code,
+  li > code,
+  dd > code,
+  td > code {
+    @apply px-1 py-0.5;
+    @apply border border-dashed border-black rounded-sm;
+  }
+
+  pre {
+    @apply m-6 p-4;
+    @apply text-sm;
+    @apply border border-black;
+  }
+
+  pre code {
+    counter-reset: step;
+    counter-increment: step 0;
+  }
+
+  code .line::before {
+    padding-right: 1rem;
+    border-right: #6e7781 1px solid;
+    content: counter(step);
+    counter-increment: step;
+    width: 1rem;
+    margin-right: 1.4rem;
+    display: inline-block;
+    text-align: right;
+    color: #6e7781;
+  }
+</style>

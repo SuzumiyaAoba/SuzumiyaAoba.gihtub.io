@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import { slugToPath } from "../libs/blog";
+
+const publishedBlogEntires = await getCollection("blog", ({ data }) => {
+  return import.meta.env.PROD ? data.draft !== true : true;
+});
+---
+
+<Layout title="(Some)one">
+  <main class="flex-grow mx-auto w-full max-w-3xl mb-12">
+    <h2>ブログ</h2>
+    <ul>
+      {
+        publishedBlogEntires.map((blogPostEntry) => (
+          <li>
+            <a href={`/blog/${slugToPath(blogPostEntry.slug)}`}>
+              {blogPostEntry.data.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</Layout>
