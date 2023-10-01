@@ -1,4 +1,7 @@
 ---
+import { format } from "date-fns";
+import { Icon } from "astro-icon";
+
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import { slugToPath } from "../libs/blog";
@@ -15,13 +18,30 @@ const publishedBlogEntires = await getCollection("blog", ({ data }) => {
     <ul>
       {
         publishedBlogEntires.map((blogPostEntry) => (
-          <li>
-            <a href={`/blog/${slugToPath(blogPostEntry.slug)}`}>
-              {blogPostEntry.data.title}
-            </a>
+          <li class="flex mb-8">
+            <div>
+              <div class="flex items-center">
+                <Icon name="mdi:calendar" size={21} />
+                <div class="ml-2">
+                  {format(blogPostEntry.data.created_at, "yyyy/MM/dd")}
+                </div>
+              </div>
+              <a
+                class="font-bold text-lg"
+                href={`/blog/${slugToPath(blogPostEntry.slug)}`}
+              >
+                {blogPostEntry.data.title}
+              </a>
+            </div>
           </li>
         ))
       }
     </ul>
   </main>
 </Layout>
+
+<style>
+  li:before {
+    content: "";
+  }
+</style>
