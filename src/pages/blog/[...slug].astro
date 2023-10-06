@@ -3,20 +3,27 @@ import { format } from "date-fns";
 import { Icon } from "astro-icon";
 
 import MarkdownPostLayout from "../../layouts/MarkdownPostLayout.astro";
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 
 import { slugToPath } from "../../libs/blog";
 import siteMeta from "../../siteMeta";
 
+interface Props {
+  slug: string;
+  entry: CollectionEntry<"blog">;
+}
+
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blog");
-  return blogEntries.map((entry) => {
-    const slug = slugToPath(entry.slug);
-    return {
-      params: { slug },
-      props: { slug, entry },
-    };
-  });
+  return blogEntries
+    .filter((entry) => !entry.data.draft)
+    .map((entry) => {
+      const slug = slugToPath(entry.slug);
+      return {
+        params: { slug },
+        props: { slug, entry },
+      };
+    });
 }
 
 const { slug, entry } = Astro.props;
@@ -32,6 +39,28 @@ const { Content } = await entry.render();
       <Icon name="mdi:calendar" size={21} />
       <p class="p-0 m-0">{format(entry.data.created_at, "yyyy/MM/dd")}</p>
     </div>
+    <ul class="flex list-none justify-center pt-4">
+      {
+        entry.data.tags.map((tag) => (
+          <>
+            <li class="flex gap-1 mx-1 px-2 py-1 text-sm font-bold border border-black rounded items-center">
+              <Icon name="mdi:tag" size={16} />
+              {tag}
+            </li>
+          </>
+        ))
+      }
+    </ul>
   </div>
-  <Content />
+  <div class="markdown">
+    <Content />
+  </div>
 </MarkdownPostLayout>
+
+<style>
+  h1 {
+    font-family: "Dela Gothic One", cursive;
+    @apply mt-8 mb-4;
+    @apply text-4xl;
+  }
+</style>

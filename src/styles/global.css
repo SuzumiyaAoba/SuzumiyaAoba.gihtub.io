@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.markdown {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Dela Gothic One", cursive;
+    @apply mt-8 mb-4;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+  h5 {
+    @apply text-lg;
+  }
+  h6 {
+    @apply text-base;
+  }
+
+  p {
+    @apply mx-2;
+    @apply indent-3;
+  }
+
+  a {
+    @apply underline underline-offset-2;
+    @apply decoration-dotted hover:decoration-solid;
+  }
+
+  img {
+    @apply mx-auto;
+    @apply object-cover max-w-2xl w-full h-full;
+    @apply my-8 p-4;
+    @apply border border-black;
+  }
+
+  blockquote {
+    font-family: "Noto Serif Japanese", serif;
+    @apply m-6 px-4 py-4;
+    @apply border-y border-black;
+    @apply text-sm font-bold;
+  }
+  blockquote cite {
+    @apply block;
+    @apply italic;
+    @apply w-max ml-auto;
+  }
+  blockquote p {
+    @apply mt-2;
+  }
+
+  ul,
+  ol {
+    @apply my-4;
+  }
+
+  ul li ul,
+  ol li ol {
+    @apply my-1;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+  ul li:before {
+    @apply pr-2;
+    content: "\025b6";
+    @apply text-xs;
+  }
+
+  ul.contains-task-list li:before {
+    content: "";
+  }
+
+  ol {
+    @apply list-none;
+    counter-reset: section;
+  }
+  ol > li:before {
+    content: counters(section, ".") ". ";
+    counter-increment: section;
+  }
+
+  ul li,
+  ol li {
+    @apply pl-4;
+  }
+
+  hr {
+    @apply border-black;
+    @apply my-8;
+  }
+
+  p > code,
+  li > code,
+  dd > code,
+  td > code {
+    @apply px-1 py-0.5;
+    @apply border border-dashed border-black rounded-sm;
+  }
+
+  pre {
+    @apply m-6 p-4;
+    @apply text-sm;
+    @apply border border-black;
+  }
+
+  pre code {
+    counter-reset: step;
+    counter-increment: step 0;
+  }
+
+  code .line::before {
+    padding-right: 1rem;
+    border-right: #6e7781 1px solid;
+    content: counter(step);
+    counter-increment: step;
+    width: 1rem;
+    margin-right: 1.4rem;
+    display: inline-block;
+    text-align: right;
+    color: #6e7781;
+  }
+}
