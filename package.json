@@ -11,7 +11,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@astrojs/tailwind": "^5.0.1",
+    "@astrojs/tailwind": "^5.0.2",
     "@fontsource/dela-gothic-one": "^5.0.11",
     "@fontsource/m-plus-rounded-1c": "^5.0.7",
     "@fontsource/noto-serif-jp": "^5.0.7",
@@ -22,7 +22,8 @@
     "rehype-katex": "^7.0.0",
     "remark-join-cjk-lines": "^1.0.11",
     "remark-math": "^5.0.0",
-    "sharp": "^0.32.6"
+    "sharp": "^0.32.6",
+    "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
     "date-fns": "^2.30.0",
