@@ -4,6 +4,8 @@ import Footer from "../components/Footer.astro";
 
 import "@fontsource/dela-gothic-one";
 import "@fontsource/m-plus-rounded-1c";
+import "@fontsource/m-plus-rounded-1c/700.css";
+import "@fontsource/m-plus-rounded-1c/800.css";
 import "@fontsource/noto-serif-jp";
 
 interface Props {
@@ -79,8 +81,16 @@ const { title } = Astro.props;
   }
 
   a {
-    @apply underline underline-offset-2;
+    @apply underline underline-offset-4;
     @apply decoration-dotted hover:decoration-solid;
+  }
+
+  em {
+    font-family: "Noto Serif Japanese", serif;
+  }
+
+  strong {
+    @apply font-extrabold;
   }
 
   img {
@@ -167,7 +177,7 @@ const { title } = Astro.props;
   }
 
   code .line::before {
-    padding-right: 1rem;
+    padding-right: 2rem;
     border-right: #6e7781 1px solid;
     content: counter(step);
     counter-increment: step;
@@ -176,5 +186,23 @@ const { title } = Astro.props;
     display: inline-block;
     text-align: right;
     color: #6e7781;
+  }
+
+  table {
+    @apply max-w-xl w-full;
+    @apply my-12 mx-auto;
+  }
+
+  tr {
+    @apply border-b border-black;
+  }
+
+  th:nth-child(n + 2),
+  td:nth-child(n + 2) {
+    @apply border-l border-dotted border-black;
+  }
+
+  td {
+    @apply py-2;
   }
 </style>

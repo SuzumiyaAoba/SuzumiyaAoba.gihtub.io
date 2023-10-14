@@ -5,6 +5,8 @@ import tailwind from "@astrojs/tailwind";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 
+import remarkJoinCjkLines from "remark-join-cjk-lines";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://suzumiyaaoba.github.io",
@@ -15,7 +17,7 @@ export default defineConfig({
       langs: [],
       wrap: false,
     },
-    remarkPlugins: [remarkMath],
+    remarkPlugins: [remarkJoinCjkLines, remarkMath],
     rehypePlugins: [rehypeKatex],
   },
   image: {

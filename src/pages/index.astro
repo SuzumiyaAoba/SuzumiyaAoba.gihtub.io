@@ -1,5 +1,5 @@
 ---
-import { format } from "date-fns";
+import { compareAsc, compareDesc, format } from "date-fns";
 import { Icon } from "astro-icon";
 
 import { getCollection } from "astro:content";
@@ -9,6 +9,10 @@ import siteMeta from "../siteMeta";
 
 const publishedBlogEntires = await getCollection("blog", ({ data }) => {
   return import.meta.env.PROD ? data.draft !== true : true;
+}).then((collection) => {
+  return collection.sort((a, b) => {
+    return compareDesc(a.data.created_at, b.data.created_at);
+  });
 });
 ---
 
