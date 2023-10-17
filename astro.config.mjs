@@ -1,5 +1,6 @@
 import { defineConfig, squooshImageService } from "astro/config";
 
+import partytown from "@astrojs/partytown";
 import tailwind from "@astrojs/tailwind";
 
 import remarkMath from "remark-math";
@@ -26,6 +27,11 @@ export default defineConfig({
   integrations: [
     tailwind({
       applyBaseStyles: false,
+    }),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
     }),
   ],
 });
