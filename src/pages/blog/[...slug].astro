@@ -32,9 +32,9 @@ const { Content } = await entry.render();
 
 <MarkdownPostLayout title={`${entry.data.title} | ${siteMeta.siteName}`}>
   <div class="mb-12">
-    <a class="no-underline" href={`/blog/${slug}`}>
-      <h1 class="text-center">{entry.data.title}</h1>
-    </a>
+    <h1 class="text-center">
+      <a class="no-underline" href={`/blog/${slug}`}> {entry.data.title}</a>
+    </h1>
     <div class="flex justify-center items-center">
       <Icon name="mdi:calendar" size={21} />
       <p class="p-0 ml-1 indent-0">
