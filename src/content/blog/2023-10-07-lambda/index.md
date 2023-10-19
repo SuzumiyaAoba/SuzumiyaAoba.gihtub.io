@@ -2,7 +2,7 @@
 title: ラムダ計算入門
 created_at: 2023-10-07
 tags: ["ラムダ計算", "プログラミング", "TypeScript"]
-draft: false
+draft: true
 ---
 
 ## 想定読者
