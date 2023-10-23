@@ -37,7 +37,6 @@ h6 {
 }
 
 p {
-  @apply mx-2;
   @apply indent-3;
 }
 
