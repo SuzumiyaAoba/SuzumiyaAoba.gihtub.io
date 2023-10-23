@@ -351,7 +351,3 @@ Scala 3 では、このように書くことで型 `T` に対して `Semigroup` 
 ## 参考URL
 
 - [Semigroup](https://typelevel.org/cats/typeclasses/semigroup.html)
-
-```
-
-```
