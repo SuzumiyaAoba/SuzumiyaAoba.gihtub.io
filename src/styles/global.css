@@ -72,9 +72,6 @@ blockquote cite {
   @apply italic;
   @apply w-max ml-auto;
 }
-blockquote p {
-  @apply mt-2;
-}
 
 ul,
 ol {
