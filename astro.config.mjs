@@ -6,6 +6,7 @@ import tailwind from "@astrojs/tailwind";
 import remarkMath from "remark-math";
 import remarkEmoji from "remark-emoji";
 import rehypeKatex from "rehype-katex";
+import rehypeStarryNight from "@microflash/rehype-starry-night";
 
 import remarkJoinCjkLines from "remark-join-cjk-lines";
 
@@ -14,13 +15,14 @@ export default defineConfig({
   site: "https://suzumiyaaoba.github.io",
   markdown: {
     gfm: true,
+    syntaxHighlight: false,
     shikiConfig: {
       theme: "min-light",
       langs: [],
       wrap: false,
     },
     remarkPlugins: [remarkEmoji, remarkJoinCjkLines, remarkMath],
-    rehypePlugins: [rehypeKatex],
+    rehypePlugins: [rehypeKatex, rehypeStarryNight],
   },
   image: {
     service: squooshImageService(),

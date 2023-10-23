@@ -16,6 +16,7 @@
     "@fontsource/m-plus-rounded-1c": "^5.0.7",
     "@fontsource/noto-serif-jp": "^5.0.7",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+    "@wooorm/starry-night": "^3.0.0",
     "astro": "^3.2.0",
     "astro-icon": "^0.8.1",
     "katex": "^0.16.8",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "@astrojs/partytown": "^2.0.1",
+    "@microflash/rehype-starry-night": "^3.0.0",
     "date-fns": "^2.30.0",
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.0",

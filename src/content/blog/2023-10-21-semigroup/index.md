@@ -48,7 +48,6 @@ draft: false
 
 御託はこの辺にして半群の定義を見てみよう。
 
-
 ### 半群
 
 集合 $S$ とその集合上の二項演算 $\circ: S \times S \to S$ の組 $(S, \circ)$ が以下の条件を満すとき**半群**という。
@@ -152,7 +151,7 @@ $$
 
 半群の定義を Scala 3 のコードに落とし込むと以下のようになる。
 
-```scala
+```scala caption='Semigroup 型クラス'
 trait Semigroup[T]:
   extension (x: T) def combine(y: T): T
 ```
@@ -184,9 +183,9 @@ trait Semigroup[T]:
 
 正確性には欠けるものの、以下のような対応が成り立つ。
 
-| Scala 3            | 数学             |
-|:------------------:|:----------------:|
-| 型 `T`             | 集合 $S$         |
+|      Scala 3       |       数学       |
+| :----------------: | :--------------: |
+|       型 `T`       |     集合 $S$     |
 | メソッド `combine` | 二項演算 $\circ$ |
 
 「型 = 集合」という理解は正確ではないであるため、あくまで直観的にはこのような対応となっている、という点に注意して欲しい。
@@ -198,7 +197,7 @@ trait Semigroup[T]:
 半群がソースコード上で定義できたので、次はその例 (instance) を表現してみよう。
 Scala 3 では以下のように書くことで型クラスのインスタンスを定義できる。
 
-```scala
+```scala caption='Semigroup 型クラスの Int インスタンス'
 given Semigroup[Int] with
   extension (x: Int) def combine(y: Int): Int = x + y
 ```
@@ -217,9 +216,9 @@ given Semigroup[Int] with
 Scala ではメソッド名に記号が使えるのに加えて、引数が一つのメソッドは二項演算子のように
 `.` や括弧を省略することができるため、次のように `Semigroup` に `|+|` メソッドを追加することで、
 
-```scala
+```scala {4}
 trait Semigroup[T]:
-  extension (x: T) 
+  extension (x: T)
     def combine(y: T): T
     def |+|(y: T): T = combine(y)
 ```
@@ -239,7 +238,7 @@ trait Semigroup[T]:
 半群の定義は既にしているため、インスタンスの実装を考えればよい。
 リストの場合は型パラメータを一つ受け取るため、`(Int, +)` と少しだけ異なる構文を使わなければならない。
 
-```scala
+```scala caption='Semigroup 型クラスの List インスタンス'
 given listSemigroup[T]: Semigroup[List[T]] with
   extension (x: List[T])
     def combine(y: List[T]): List[T] = x ++ y
@@ -306,17 +305,17 @@ Scala 3 による `Semigroup` のインスタンスを定義する方法を見�
 
 さて、`(Option[Semigroup[T]], |+|)` の気持ちを理解できたところで [Scala 3 による実装](https://scastie.scala-lang.org/SuzumiyaAoba/w4V5lBM7THi6s7ceaYMDXg/4)を見てみよう。
 
-```scala
-given optionSemigroup[T](using Semigroup[T]): Semigroup[Option[T]] with
-  extension (x: Option[T])
-    def combine(y: Option[T]): Option[T] = x match {
-      case Some(a) =>
-        y match {
-          case Some(b) => Some(a |+| b)
-          case None    => None
-        }
-      case None => None
-    }
+```scala caption='Semigroup 型クラスの Option インスタンス'
+  given optionSemigroup[T](using Semigroup[T]): Semigroup[Option[T]] with
+    extension (x: Option[T])
+      def combine(y: Option[T]): Option[T] = x match {
+        case Some(a) =>
+          y match {
+            case Some(b) => Some(a |+| b)
+            case None => None
+          }
+        case None => None
+      }
 ```
 
 `listSemigroup` との違いは `(using Semigroup[T])` だろう。
@@ -352,3 +351,7 @@ Scala 3 では、このように書くことで型 `T` に対して `Semigroup` 
 ## 参考URL
 
 - [Semigroup](https://typelevel.org/cats/typeclasses/semigroup.html)
+
+```
+
+```
