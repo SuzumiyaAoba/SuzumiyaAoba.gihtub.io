@@ -7,13 +7,8 @@ import "@wooorm/starry-night/style/light";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
-import "@fontsource/dela-gothic-one";
-import "@fontsource/m-plus-rounded-1c";
-import "@fontsource/m-plus-rounded-1c/700.css";
-import "@fontsource/m-plus-rounded-1c/800.css";
-import "@fontsource/noto-serif-jp";
-
 import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+import GoogleFonts from "../components/GoogleFonts.astro";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
@@ -33,11 +28,12 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
+    <GoogleFonts />
+    <GoogleAnalytics />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
     />
-    <GoogleAnalytics />
   </head>
   <body class="flex flex-col min-h-screen">
     <Header />
