@@ -11,6 +11,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.0.2",
     "@astrojs/tailwind": "^5.0.2",
     "@fontsource/dela-gothic-one": "^5.0.11",
     "@fontsource/m-plus-rounded-1c": "^5.0.7",

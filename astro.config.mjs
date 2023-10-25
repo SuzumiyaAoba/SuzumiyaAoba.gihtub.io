@@ -1,14 +1,13 @@
 import { defineConfig, squooshImageService } from "astro/config";
-
 import partytown from "@astrojs/partytown";
 import tailwind from "@astrojs/tailwind";
-
 import remarkMath from "remark-math";
 import remarkEmoji from "remark-emoji";
 import rehypeKatex from "rehype-katex";
 import rehypeStarryNight from "@microflash/rehype-starry-night";
-
 import remarkJoinCjkLines from "remark-join-cjk-lines";
+
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
@@ -36,5 +35,6 @@ export default defineConfig({
         forward: ["dataLayer.push"],
       },
     }),
+    sitemap(),
   ],
 });
