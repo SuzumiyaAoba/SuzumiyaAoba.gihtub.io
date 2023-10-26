@@ -137,7 +137,7 @@ $$
 - `(List[T], ++)`
 - `(Option[Semigroup[T]], |+|)`
 - `(Map[K, Semigroup[V]], ++)`
-- `(Function[A, B], compose)`
+- `(Function[A, A], compose)`
 
 `Int` は `Long`、`Float`、`Double` にしても成り立つ。
 `(Option[Semigroup[T]], |+|)` や `(Map[K, Semigroup[V]], ++)` は正確性に欠ける表記だが、
