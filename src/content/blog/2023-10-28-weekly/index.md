@@ -17,7 +17,7 @@ draft: false
 また、毎回おすすめの YouTube の動画を一つ貼ることにする。
 今回はなちょ猫の『てねてね』歌ってみた動画。
 
-<cetner>
+<center>
   <iframe
     width="560"
     height="315"
