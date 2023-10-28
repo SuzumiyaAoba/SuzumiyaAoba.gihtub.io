@@ -36,8 +36,13 @@ h6 {
   @apply text-base;
 }
 
+center {
+  @apply my-8;
+}
+
 p {
   @apply indent-3;
+  @apply my-2;
 }
 
 a {
@@ -121,23 +126,6 @@ td > code {
   @apply px-1 py-0.5;
   @apply border border-dashed border-black rounded-sm;
 }
-
-/* pre code {
-  counter-reset: step;
-  counter-increment: step 0;
-}
-
-code .line::before {
-  padding-right: 2rem;
-  border-right: #6e7781 1px solid;
-  content: counter(step);
-  counter-increment: step;
-  width: 1rem;
-  margin-right: 1.4rem;
-  display: inline-block;
-  text-align: right;
-  color: #6e7781;
-} */
 
 table {
   @apply max-w-xl w-full;
