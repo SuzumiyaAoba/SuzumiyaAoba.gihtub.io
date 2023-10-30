@@ -18,14 +18,16 @@ draft: false
 今回はなちょ猫の『てねてね』歌ってみた動画。
 
 <center>
-  <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube-nocookie.com/embed/1CQjWtqFSc4?si=46I3p2cqoMbLMD-4"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
+  <div class="video">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube-nocookie.com/embed/1CQjWtqFSc4?si=46I3p2cqoMbLMD-4"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </div>
   </iframe>
 </center>
 
@@ -39,28 +41,32 @@ Osmo Pocket 3 は 1 インチと大きく進化している。
 写真やカメラの撮影は勿論のこと Vlog にも興味がないけど、レビュー動画を見ていてこの大きさでここまで綺麗な動画が取れるようになっているのかと驚いた。
 
 <center>
-  <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube-nocookie.com/embed/yLFpjIC_i88?si=SnuE9WiPeulXx0We"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
+  <div class="video">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube-nocookie.com/embed/yLFpjIC_i88?si=SnuE9WiPeulXx0We"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
 </center>
 
 夜の撮影を見てもかなり明るい。
 
 <center>
-  <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube-nocookie.com/embed/nL0zLQZiUBQ?si=sasJ6napSA_gUy_l"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
+  <div class="video">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube-nocookie.com/embed/nL0zLQZiUBQ?si=sasJ6napSA_gUy_l"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </div>
   </iframe>
 </center>
 
@@ -79,15 +85,17 @@ Arya Organic は 20 万円くらいなので半年ほどお金を貯めれば買
 価格が 3倍 以上なのでおいそれと買えるようなものではない。
 
 <center>
-  <iframe 
-    width="560"
-    height="315"
-    src="https://www.youtube-nocookie.com/embed/E6qOoiJmzqU?si=zPQSPLFOcMlR5tj2"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
+  <div class="video">
+    <iframe 
+      width="560"
+      height="315"
+      src="https://www.youtube-nocookie.com/embed/E6qOoiJmzqU?si=zPQSPLFOcMlR5tj2"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
 </center>
 
 ### Fiio R7
@@ -201,5 +209,3 @@ CI 平均 5 分はいい話。業務で触っているシステムもこのレ�
 
 これなら継続できそう。
 ただ、読んだ記事や見た動画のメモを忘れないかが問題。
-
-

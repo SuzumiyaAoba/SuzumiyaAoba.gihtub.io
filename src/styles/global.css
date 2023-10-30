@@ -163,3 +163,19 @@ pre {
   --highlight-border-color: hsl(208, 21%, 86%);
   --highlight-code-highlight: hsl(208, 19%, 82%);
 }
+
+/* YouTube */
+.video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+}
+
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
