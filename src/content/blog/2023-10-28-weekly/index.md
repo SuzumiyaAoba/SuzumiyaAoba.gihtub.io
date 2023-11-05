@@ -1,5 +1,5 @@
 ---
-title: 週報 2023/10/28
+title: 週報 2023/10/22 ~ 2023/10/28
 created_at: 2023-10-28
 tags: ["週報"]
 draft: false
