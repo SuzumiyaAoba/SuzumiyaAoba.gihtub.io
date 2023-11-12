@@ -19,19 +19,24 @@ export default defineConfig({
     shikiConfig: {
       theme: "min-light",
       langs: [],
-      wrap: false
+      wrap: false,
     },
     remarkPlugins: [remarkEmoji, remarkJoinCjkLines, remarkMath],
-    rehypePlugins: [rehypeKatex, rehypeStarryNight]
+    rehypePlugins: [rehypeKatex, rehypeStarryNight],
   },
   image: {
-    service: squooshImageService()
+    service: squooshImageService(),
   },
-  integrations: [tailwind({
-    applyBaseStyles: false
-  }), partytown({
-    config: {
-      forward: ["dataLayer.push"]
-    }
-  }), sitemap(), mdx()]
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
+    sitemap(),
+    mdx(),
+  ],
 });
