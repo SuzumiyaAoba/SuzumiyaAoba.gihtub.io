@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "M Plus Rounded 1c", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 body {
   font-family: "M Plus Rounded 1c", serif;
   @apply leading-loose;
