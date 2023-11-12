@@ -5,6 +5,8 @@ tags: ["週報"]
 draft: false
 ---
 
+import { YouTube } from "@astro-community/astro-embed-youtube";
+
 ## プロローグ
 
 ブログを作り始めてみたもののこれと言って書くことがないので毎回継続することができない。
@@ -17,19 +19,7 @@ draft: false
 また、毎回おすすめの YouTube の動画を一つ貼ることにする。
 今回はなちょ猫の『てねてね』歌ってみた動画。
 
-<center>
-  <div class="video">
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube-nocookie.com/embed/1CQjWtqFSc4?si=46I3p2cqoMbLMD-4"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </div>
-  </iframe>
-</center>
+<YouTube id="1CQjWtqFSc4">
 
 ## ガジェット
 
@@ -40,35 +30,11 @@ DIJ から Osmo Pocket 2 の後継機にあたる [Osmo Pocket 3](https://www.dj
 Osmo Pocket 3 は 1 インチと大きく進化している。
 写真やカメラの撮影は勿論のこと Vlog にも興味がないけど、レビュー動画を見ていてこの大きさでここまで綺麗な動画が取れるようになっているのかと驚いた。
 
-<center>
-  <div class="video">
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube-nocookie.com/embed/yLFpjIC_i88?si=SnuE9WiPeulXx0We"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-</center>
+<YouTube id="yLFpjIC_i88">
 
 夜の撮影を見てもかなり明るい。
 
-<center>
-  <div class="video">
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube-nocookie.com/embed/nL0zLQZiUBQ?si=sasJ6napSA_gUy_l"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </div>
-  </iframe>
-</center>
+<YouTube id="nL0zLQZiUBQ">
 
 この大きさであればどこかに出かけたときに持ち歩くのも苦ではないし、
 かなり良さそうな製品に感じた。
@@ -84,19 +50,7 @@ Arya Organic は 20 万円くらいなので半年ほどお金を貯めれば買
 寄り道をせずにこちらを買った方がいいのではないかという思いが強い。
 価格が 3倍 以上なのでおいそれと買えるようなものではない。
 
-<center>
-  <div class="video">
-    <iframe 
-      width="560"
-      height="315"
-      src="https://www.youtube-nocookie.com/embed/E6qOoiJmzqU?si=zPQSPLFOcMlR5tj2"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-</center>
+<YouTube id="E6qOoiJmzqU">
 
 ### Fiio R7
 
@@ -138,8 +92,8 @@ Amazon Music や NAS に保存している音楽を再生するには PC かス�
     title="関数型プログラミングと型システムのメンタルモデル"
     allowfullscreen="true"
     style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;"
-    data-ratio="1.7777777777777777">
-  </iframe>
+    data-ratio="1.7777777777777777"
+  ></iframe>
 </center>
 
 型を集合と捉えるのは最初の理解としてはいいけど、関連して知っておいた方がいいトピックがあると思う。
@@ -162,8 +116,8 @@ CI 平均 5 分はいい話。業務で触っているシステムもこのレ�
     title="Findyの開発生産性向上への取り組み ~Findyフロントエンドの場合~"
     allowfullscreen="true"
     style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;"
-    data-ratio="1.7777777777777777">
-  </iframe>
+    data-ratio="1.7777777777777777"
+  ></iframe>
 </center>
 
 #### Qiita Conference 2023 基調講演 「後任POのサバイバルガイド：カリスマプロダクトオーナーの後を継ぐ！ワンマンからチームプレーへの紆余曲折」
@@ -176,8 +130,8 @@ CI 平均 5 分はいい話。業務で触っているシステムもこのレ�
     title="Qiita Conference 2023 基調講演 「後任POのサバイバルガイド：カリスマプロダクトオーナーの後を継ぐ！ワンマンからチームプレーへの紆余曲折」"
     allowfullscreen="true"
     style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;"
-    data-ratio="1.7777777777777777">
-  </iframe>
+    data-ratio="1.7777777777777777"
+  ></iframe>
 </center>
 
 ### スライド
@@ -192,8 +146,8 @@ CI 平均 5 分はいい話。業務で触っているシステムもこのレ�
     title="管理機能アーキテクチャパターンの考察と実践 / Learn Architecture through Admin"
     allowfullscreen="true"
     style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;"
-    data-ratio="1.7777777777777777">
-  </iframe>
+    data-ratio="1.7777777777777777"
+  ></iframe>
 </center>
 
 ## 個人的なできごと
