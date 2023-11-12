@@ -6,8 +6,9 @@ import remarkEmoji from "remark-emoji";
 import rehypeKatex from "rehype-katex";
 import rehypeStarryNight from "@microflash/rehype-starry-night";
 import remarkJoinCjkLines from "remark-join-cjk-lines";
-
 import sitemap from "@astrojs/sitemap";
+
+import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,23 +19,19 @@ export default defineConfig({
     shikiConfig: {
       theme: "min-light",
       langs: [],
-      wrap: false,
+      wrap: false
     },
     remarkPlugins: [remarkEmoji, remarkJoinCjkLines, remarkMath],
-    rehypePlugins: [rehypeKatex, rehypeStarryNight],
+    rehypePlugins: [rehypeKatex, rehypeStarryNight]
   },
   image: {
-    service: squooshImageService(),
+    service: squooshImageService()
   },
-  integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
-    partytown({
-      config: {
-        forward: ["dataLayer.push"],
-      },
-    }),
-    sitemap(),
-  ],
+  integrations: [tailwind({
+    applyBaseStyles: false
+  }), partytown({
+    config: {
+      forward: ["dataLayer.push"]
+    }
+  }), sitemap(), mdx()]
 });

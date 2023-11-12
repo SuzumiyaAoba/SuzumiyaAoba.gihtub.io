@@ -11,6 +11,8 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@astro-community/astro-embed-youtube": "^0.4.1",
+    "@astrojs/mdx": "^1.1.4",
     "@astrojs/sitemap": "^3.0.2",
     "@astrojs/tailwind": "^5.0.2",
     "@fontsource/dela-gothic-one": "^5.0.11",
