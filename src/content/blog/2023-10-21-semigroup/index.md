@@ -52,7 +52,7 @@ draft: false
 
 集合 $S$ とその集合上の二項演算 $\circ: S \times S \to S$ の組 $(S, \circ)$ が以下の条件を満すとき**半群**という。
 
-- 二項演算 $\circ$ が[**結合律**](https://ja.wikipedia.org/wiki/%E7%B5%90%E5%90%88%E6%B3%95%E5%89%87)満たす
+- 二項演算 $\circ$ が[**結合律**](https://ja.wikipedia.org/wiki/%E7%B5%90%E5%90%88%E6%B3%95%E5%89%87)を満たす
 
 また、集合 $S$ のことを[**台集合**](https://ja.wikipedia.org/wiki/%E6%95%B0%E5%AD%A6%E7%9A%84%E6%A7%8B%E9%80%A0#%E5%AE%9A%E7%BE%A9)と呼ぶ。
 

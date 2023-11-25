@@ -25,26 +25,15 @@ h6 {
 }
 
 h1 {
-  @apply text-4xl;
-}
-h2 {
-  @apply text-3xl;
-}
-h3 {
-  @apply text-2xl;
-}
-h4 {
-  @apply text-xl;
-}
-h5 {
-  @apply text-lg;
-}
-h6 {
-  @apply text-base;
+  @apply text-2xl leading-10;
 }
 
-center {
-  @apply my-8;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-xl;
 }
 
 p {
@@ -57,14 +46,6 @@ a {
   @apply decoration-dotted hover:decoration-solid;
 }
 
-em {
-  font-family: "Noto Serif Japanese", serif;
-}
-
-strong {
-  @apply font-extrabold;
-}
-
 img {
   @apply mx-auto;
   @apply object-cover max-w-2xl w-full h-full;
@@ -72,96 +53,14 @@ img {
   @apply border border-black;
 }
 
-blockquote {
-  font-family: "Noto Serif Japanese", serif;
-  @apply m-6 px-4 py-4;
-  @apply border-y border-black;
-  @apply text-sm font-bold;
-}
-blockquote cite {
-  @apply block;
-  @apply italic;
-  @apply w-max ml-auto;
-}
-
-ul,
-ol {
-  @apply my-4;
-}
-
-ul li ul,
-ol li ol {
-  @apply my-1;
-}
-
-ul {
-  list-style-type: none;
-}
-ul li:before {
-  @apply pr-2;
-  content: "\025b6";
-  @apply text-xs;
-}
-
-ul.contains-task-list li:before {
-  content: "";
-}
-
-ol {
-  @apply list-none;
-  counter-reset: section;
-}
-ol > li:before {
-  content: counters(section, ".") ". ";
-  counter-increment: section;
-}
-
-ul li,
-ol li {
-  @apply pl-4;
-}
-
-hr {
-  @apply border-black;
-  @apply my-8;
-}
-
-p > code,
-li > code,
-dd > code,
-td > code {
-  @apply px-1 py-0.5;
-  @apply border border-dashed border-black rounded-sm;
-}
-
-table {
-  @apply max-w-xl w-full;
-  @apply my-12 mx-auto;
-}
-
-tr {
-  @apply border-b border-black;
-}
-
-th:nth-child(n + 2),
-td:nth-child(n + 2) {
-  @apply border-l border-dotted border-black;
-}
-
-td {
-  @apply py-2;
-}
-
 /* rehype-starry-night */
 
-div.highlight {
-  @apply my-4;
+pre {
+  @apply whitespace-pre;
 }
 
-pre {
-  @apply mx-2 my-4;
-  @apply text-sm;
-  @apply border border-black;
+pre code {
+  @apply overflow-x-auto;
 }
 
 :root {

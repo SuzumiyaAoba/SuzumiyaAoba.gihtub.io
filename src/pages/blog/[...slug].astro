@@ -33,26 +33,26 @@ const { Content } = await entry.render();
 ---
 
 <MarkdownPostLayout title={`${entry.data.title} | ${siteMeta.siteName}`}>
-  <div class="mb-12">
-    <h1 class="text-center">
+  <div class="mb-6">
+    <h1 class="flex py-0 my-1 justify-center">
       <a class="no-underline" href={`/blog/${slug}`}> {entry.data.title}</a>
     </h1>
-    <div class="flex justify-center items-center">
+    <div class="flex justify-center items-center my-2">
       <Icon name="mdi:calendar" size={21} />
-      <p class="p-0 ml-1 indent-0">
+      <p class="my-0 p-0 ml-1 indent-0">
         {format(entry.data.created_at, "yyyy/MM/dd")}
       </p>
     </div>
-    <ul class="flex flex-wrap list-none justify-center pt-4 mb-0">
+    <ul class="flex flex-wrap list-none justify-center">
       {
         entry.data.tags.map((tag) => (
           <>
             <li
-              class="before:content-none
-                     flex gap-1 mx-1 my-1 px-2 py-1
+              class="flex gap-1 mx-1 my-1 px-2 py-1
                      items-center
                      text-sm
-                     border border-black rounded-full"
+                     border border-black rounded-full
+                     after:content-['']"
             >
               <Icon name="mdi:tag" size={16} />
               {tag}

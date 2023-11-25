@@ -22,7 +22,7 @@ const publishedBlogEntires = await getCollection("blog", ({ data }) => {
     <ul>
       {
         publishedBlogEntires.map((blogPostEntry) => (
-          <li class="flex mb-8">
+          <li class="flex mb-8 after:content-['']">
             <div>
               <div class="flex items-center">
                 <Icon name="mdi:calendar" size={21} />
