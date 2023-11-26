@@ -36,6 +36,26 @@ h6 {
   @apply text-xl;
 }
 
+h2:before {
+  content: "## ";
+  @apply text-sm;
+}
+
+h3:before {
+  content: "### ";
+  @apply text-sm;
+}
+
+h4:before {
+  content: "#### ";
+  @apply text-sm;
+}
+
+h5:before {
+  content: "##### ";
+  @apply text-sm;
+}
+
 p {
   @apply indent-3;
   @apply my-2;
