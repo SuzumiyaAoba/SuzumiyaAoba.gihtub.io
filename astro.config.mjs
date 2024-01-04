@@ -9,6 +9,7 @@ import remarkJoinCjkLines from "remark-join-cjk-lines";
 import sitemap from "@astrojs/sitemap";
 
 import mdx from "@astrojs/mdx";
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
@@ -38,5 +39,6 @@ export default defineConfig({
     }),
     sitemap(),
     mdx(),
+    icon(),
   ],
 });

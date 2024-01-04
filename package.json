@@ -12,16 +12,17 @@
   },
   "dependencies": {
     "@astro-community/astro-embed-youtube": "^0.4.3",
-    "@astrojs/mdx": "^2.0.2",
-    "@astrojs/sitemap": "^3.0.3",
-    "@astrojs/tailwind": "^5.0.4",
+    "@astrojs/mdx": "^2.0.3",
+    "@astrojs/sitemap": "^3.0.4",
+    "@astrojs/tailwind": "^5.1.0",
     "@fontsource/dela-gothic-one": "^5.0.17",
     "@fontsource/m-plus-rounded-1c": "^5.0.11",
     "@fontsource/noto-serif-jp": "^5.0.11",
+    "@iconify-json/mdi": "^1.1.64",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "@wooorm/starry-night": "^3.2.0",
-    "astro": "^4.0.7",
-    "astro-icon": "^0.8.2",
+    "astro": "^4.1.0",
+    "astro-icon": "^1.0.2",
     "katex": "^0.16.9",
     "rehype-katex": "^7.0.0",
     "remark-join-cjk-lines": "^1.0.11",
@@ -31,11 +32,11 @@
     "terminal.css": "^0.7.5"
   },
   "devDependencies": {
-    "@astrojs/partytown": "^2.0.2",
+    "@astrojs/partytown": "^2.0.3",
     "@microflash/rehype-starry-night": "^3.1.0",
     "date-fns": "^3.0.6",
     "prettier": "^3.1.1",
-    "prettier-plugin-astro": "^0.12.2",
+    "prettier-plugin-astro": "^0.12.3",
     "remark-emoji": "^4.0.1"
   }
 }
