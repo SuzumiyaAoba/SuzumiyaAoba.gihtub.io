@@ -70,6 +70,7 @@ console.log("Hello, World");
 また、``\` の後に言語を指定し、Prisma や Shiki といったライブラリを利用することでシンタックスハイライトを付けられる。
 
 ```js
+// コンソールに Hello, World! と出力する
 console.log("Hello, World!");
 ```
 

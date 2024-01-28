@@ -1,16 +1,23 @@
 ---
+import siteMeta from "../siteMeta"
 
+const fonts = siteMeta.googleFonts;
+
+const familyQuery = fonts.map(font => {
+  const weight = font.weight.join(";");
+  return `family=${encodeURI(font.name)}${weight === "" ? "" : `:wght@${weight}`}`;
+}).join("&");
 ---
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
-  href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Serif+JP&display=swap"
+  href={`https://fonts.googleapis.com/css2?${familyQuery}&display=swap`}
   rel="preload"
   as="style"
 />
 <link
-  href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Serif+JP&display=swap"
+  href={`https://fonts.googleapis.com/css2?${familyQuery}&display=swap`}
   rel="stylesheet"
   media="print"
   onload="this.media='all'"

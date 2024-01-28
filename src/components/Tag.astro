@@ -1,0 +1,20 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { name } = Astro.props;
+---
+
+<div class="tag">
+  <Icon name="mdi:tag" size={16} />
+  {name}
+</div>
+
+<style>
+  .tag {
+    @apply flex gap-1;
+    @apply mx-1 my-1 px-2 py-1;
+    @apply items-center;
+    @apply text-sm font-bold;
+    @apply border border-black rounded-full;
+  }
+</style>

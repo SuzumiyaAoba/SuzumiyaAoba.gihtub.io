@@ -1,18 +1,22 @@
 ---
 import "@fontsource/dela-gothic-one";
+import siteMeta from "../siteMeta";
+
+const { siteName } = siteMeta;
 ---
 
 <header class="max-w-3xl mx-auto my-2 px-4 w-full">
-  <div class="title logo terminal-prompt">
-    <a href="/">(Some)one</a>
+  <div class="title">
+    <a href="/">{siteName}</a>
   </div>
 </header>
 
 <style>
   .title {
-    font-family: "Dela Gothic One", cursive;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
     @apply py-3;
-    @apply text-lg;
+    @apply text-2xl;
   }
 
   a {

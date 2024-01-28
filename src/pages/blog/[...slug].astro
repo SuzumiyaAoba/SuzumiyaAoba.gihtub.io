@@ -9,6 +9,7 @@ import { getCollection, type CollectionEntry } from "astro:content";
 
 import { slugToPath } from "../../libs/blog";
 import siteMeta from "../../siteMeta";
+import Tag from "../../components/Tag.astro";
 
 interface Props {
   slug: string;
@@ -46,18 +47,9 @@ const { Content } = await entry.render();
     <ul class="flex flex-wrap list-none justify-center">
       {
         entry.data.tags.map((tag) => (
-          <>
-            <li
-              class="flex gap-1 mx-1 my-1 px-2 py-1
-                     items-center
-                     text-sm
-                     border border-black rounded-full
-                     after:content-['']"
-            >
-              <Icon name="mdi:tag" size={16} />
-              {tag}
-            </li>
-          </>
+          <li>
+            <Tag name={tag} />
+          </li>
         ))
       }
     </ul>
