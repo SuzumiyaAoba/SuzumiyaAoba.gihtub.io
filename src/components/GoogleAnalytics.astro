@@ -1,8 +1,9 @@
 ---
 import siteMeta from "../siteMeta";
 
-
-const { googleAnalytics: { tagId }} = siteMeta;
+const {
+  googleAnalytics: { tagId },
+} = siteMeta;
 ---
 
 <script
@@ -14,5 +15,5 @@ const { googleAnalytics: { tagId }} = siteMeta;
     dataLayer.push(arguments);
   }
   gtag("js", new Date());
-  gtag("config", {tagId});
+  gtag("config", { tagId });
 </script>

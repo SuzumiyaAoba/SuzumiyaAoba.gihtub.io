@@ -10,12 +10,14 @@ import Footer from "../components/Footer.astro";
 import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 import GoogleFonts from "../components/GoogleFonts.astro";
 import { ViewTransitions } from "astro:transitions";
+import siteMeta from "../siteMeta";
 
 interface Props {
-  title: string;
+  title?: string;
 }
 
 const { title } = Astro.props;
+const { siteName } = siteMeta;
 ---
 
 <!doctype html>
@@ -27,7 +29,7 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{title === undefined ? siteName : `${title} | ${siteName}`}</title>
     <ViewTransitions />
     <GoogleFonts />
     <GoogleAnalytics />

@@ -1,11 +1,11 @@
 ---
 import { compareDesc, format } from "date-fns";
-import { Icon } from "astro-icon/components";
 
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import { slugToPath } from "../libs/blog";
 import siteMeta from "../siteMeta";
+import CalendarDays from "../components/icons/CalendarDays.astro";
 
 const publishedBlogEntires = await getCollection("blog", ({ data }) => {
   return import.meta.env.PROD ? data.draft !== true : true;
@@ -17,11 +17,13 @@ const publishedBlogEntires = await getCollection("blog", ({ data }) => {
 ---
 
 <Layout title={siteMeta.siteName}>
-  <main class="flex-grow
+  <main
+    class="flex-grow
                mx-auto
                w-full
                max-w-3xl
-               px-4 mb-12">
+               px-4 mb-12"
+  >
     <h2>ブログ</h2>
     <ul>
       {
@@ -29,8 +31,8 @@ const publishedBlogEntires = await getCollection("blog", ({ data }) => {
           <li class="flex mb-8 after:content-['']">
             <div>
               <div class="flex items-center">
-                <Icon name="mdi:calendar" size={21} />
-                <div class="ml-2">
+                <CalendarDays />
+                <div class="ml-1">
                   {format(blogPostEntry.data.created_at, "yyyy/MM/dd")}
                 </div>
               </div>

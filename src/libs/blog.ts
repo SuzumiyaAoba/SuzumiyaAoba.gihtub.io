@@ -1,3 +1,5 @@
+import { getCollection } from "astro:content";
+
 export const slugToPath = (slug: string): string => {
   const chunks: string[] = slug.split("-");
   return (
@@ -5,4 +7,17 @@ export const slugToPath = (slug: string): string => {
     "/" +
     chunks.slice(3, chunks.length).join("-")
   );
+};
+
+export const getBlogEntries = async () => {
+  const blogEntries = await getCollection("blog");
+  return blogEntries
+    .filter((entry) => !entry.data.draft)
+    .map((entry) => {
+      const slug = slugToPath(entry.slug);
+      return {
+        params: { slug },
+        props: { slug, entry },
+      };
+    });
 };

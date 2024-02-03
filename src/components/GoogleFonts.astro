@@ -1,12 +1,14 @@
 ---
-import siteMeta from "../siteMeta"
+import siteMeta from "../siteMeta";
 
 const fonts = siteMeta.googleFonts;
 
-const familyQuery = fonts.map(font => {
-  const weight = font.weight.join(";");
-  return `family=${encodeURI(font.name)}${weight === "" ? "" : `:wght@${weight}`}`;
-}).join("&");
+const familyQuery = fonts
+  .map((font) => {
+    const weight = font.weight.join(";");
+    return `family=${encodeURI(font.name)}${weight === "" ? "" : `:wght@${weight}`}`;
+  })
+  .join("&");
 ---
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />

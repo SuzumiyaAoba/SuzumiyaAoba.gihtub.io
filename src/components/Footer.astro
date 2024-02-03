@@ -1,11 +1,10 @@
 ---
-import siteMeta from "../siteMeta"
+import siteMeta from "../siteMeta";
 
-const {copyright} = siteMeta;
-const { twitter } = siteMeta.social;
+const { copyright } = siteMeta;
 ---
 
 <footer class="w-auto mx-auto my-8 text-center">
-  &copy; 2023 <a href={`https://twitter.com/${twitter}`}>{copyright}</a>
+  &copy; 2023 {copyright}
   Powered by <a href="https://astro.build/">Astro</a>
 </footer>
