@@ -62,7 +62,7 @@ img {
 
 ul,
 ol {
-  @apply pl-8;
+  @apply pl-12;
 }
 
 ul {
@@ -96,7 +96,7 @@ td {
 }
 
 pre code {
-  @apply leading-6;
+  @apply text-sm;
 }
 
 blockquote {

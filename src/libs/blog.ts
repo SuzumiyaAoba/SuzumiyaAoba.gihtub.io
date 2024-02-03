@@ -12,7 +12,9 @@ export const slugToPath = (slug: string): string => {
 export const getBlogEntries = async () => {
   const blogEntries = await getCollection("blog");
   return blogEntries
-    .filter((entry) => !entry.data.draft)
+    .filter((entry) =>
+      import.meta.env.PROD ? entry.data.draft !== true : true,
+    )
     .map((entry) => {
       const slug = slugToPath(entry.slug);
       return {
