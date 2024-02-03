@@ -75,6 +75,7 @@ ol {
 
 table {
   @apply table-auto;
+  @apply mx-auto my-6;
 }
 
 thead {
